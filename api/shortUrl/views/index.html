@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>URL Shortener</title>
+    <meta name="description" content="Saves specified url and provides shortened url">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        URL Shortener Microservice
+      </h1>
+    </header>
+
+    <main>
+      <h3>Short-URL Creation:</h3>
+      <code>https://url-bhd.glitch.me/new/https://google.ca</code> <br/>
+      <code>https://url-bhd.glitch.me/new/https://foo.com:3000</code>
+      
+      <h3>Short-URL Output:</h3>
+      <code>{ "original_url":"http://google.ca", "short_url":"https://url-bhd.glitch.me/3XY" }</code> <br/>
+      <code>{ "original_url":"http://foo.com:3000", "short_url":"https://url-bhd.glitch.me/A4R" }</code>
+      
+      <h3>Short-URL Usage:</h3>
+      <code>https://url-bhd.glitch.me/3XY"</code><br/>
+      <code>https://url-bhd.glitch.me/A4R"</code>
+      
+    </main>
+
+    
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
