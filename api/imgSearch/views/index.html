@@ -1,0 +1,74 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Search API</title>
+    <meta name="description" content="API for searching for images & links">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        Image Search API
+      </h1>
+    </header>
+
+    <main>
+      <p>
+        An api that searches for a given image and returns the top results including the image URL, page URL and alt text.
+      </p>
+      <h3>
+        Example Query:
+      </h3>
+      <code>
+        https://img-search-bhd.glitch.me/img?q=cat&offset=3
+      </code>
+      <p>Will return:</p>
+      <code>
+        [{alt_text: "paws", img_url: "http://cat-breeds-enc...", page_url: "http://cat-breeds-enc..."}, ...]
+      </code>
+      
+      
+      <h3>
+        Query Recent Queries:
+      </h3>
+      <code>
+        https://img-search-bhd.glitch.me/recent
+      </code>
+      
+      <br/>
+      <br/>
+      <br/>
+      <form>
+        <input type="text" maxlength="100" placeholder="Image Title">
+        <button type="submit">Submit</button>
+      </form>
+      
+    </main>
+
+    <footer>
+      <a href="https://glitch.com">
+        Remix this in Glitch
+      </a>
+    </footer>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
