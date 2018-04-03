@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>File Metadata</title>
+    <meta name="description" content="Checks the metadata of the file (really just the size)">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  
+  <body>
+    <header>
+      <h1>
+        File Metadata Check
+      </h1>
+    </header>
+
+    <main>
+      
+      <p>Upload a file and submit to check it's metadata. Really this just returns the file size.</p>
+      <br>
+      
+      <form action="/" method="get">
+        <input type="file" id="inputFile" name="filename" >
+        <input type="hidden" id="filesize" name="filesize" value="0">
+        <button type="submit">Submit</button>
+      </form>
+      
+    </main>
+
+    
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
