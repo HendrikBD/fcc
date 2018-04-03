@@ -20,7 +20,7 @@ app.get("/img", function(req, res){
   page = (!page) ? 1 : page;
   
   if(!query){
-    res.end("Error: No query string")
+    res.redirect("/")
   } else{
   
     var url = "https://pixabay.com/api/?key=8573728-7f25b061566072ed4e319c011&page=" + String(page) + "&q=" + String(query);
